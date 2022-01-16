@@ -80,7 +80,7 @@ private:
 			return;
 		}
 		Node<T>** successor = find_successor(&(*forDelete)->right);
-		std::swap((*forDelete)->value, (*successor)->value);
+		(*forDelete)->value = (*successor)->value;
 		del(successor);
 	}
 public:
@@ -115,6 +115,6 @@ int main()
 	tree.print();
 	std::cout << "\n\n\n";
 	tree.del(42);
-	tree.del(106);
+	tree.del(12);
 	tree.print();
 }
