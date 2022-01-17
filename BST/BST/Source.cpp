@@ -90,13 +90,11 @@ public:
 	}
 	void add(T value)
 	{
-		Node<T>** tmp = &(this->root);
-		add(value, tmp);
+		add(value, &(this->root));
 	}
 	void print()
 	{
-		Node<T>* tmp = this->root;
-		print(tmp, 0);
+		print(this->root, 0);
 	}
 	void del(T value)
 	{
